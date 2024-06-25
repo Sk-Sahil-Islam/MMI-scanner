@@ -22,10 +22,10 @@ def main(context):
 
     # `ctx.res.json()` is a handy helper for sending JSON
         mmi = getMmi()
-        return context.res.json(
-            {
+        return context.res.send(json({
                 "mmi": mmi
-            }
+            })
+            
         )
 def getMmi():
     # Initialize Chrome options
