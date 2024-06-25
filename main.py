@@ -18,7 +18,7 @@ def getMmi():
     driver.get("https://edition.cnn.com/markets/fear-and-greed")
 
     # Wait for the page to load
-    time.sleep(5)
+    time.sleep(3)
 
     mmi = None
     try:
