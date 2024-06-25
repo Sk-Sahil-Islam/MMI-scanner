@@ -20,7 +20,7 @@ def main(context):
         # Send a response with the res object helpers
         # `ctx.res.send()` dispatches a string back to the client
         mmiJson = getMmi()
-        return context.res.send(str(mmiJson))
+        return context.res.send("Hello, World!")
 
     # `ctx.res.json()` is a handy helper for sending JSON
     mmi = getMmi()
