@@ -2,18 +2,20 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
+from chromedriver_py import binary_path
 import time
 import json
 
 def getMmi():
     # Initialize Chrome options
-    options = webdriver.ChromeOptions()
-    options.add_argument("--headless")
-    options.add_argument("--disable-gpu")
+    chrome_options = Options()
+    chrome_options.add_argument("--headless")
+    chrome_options.add_argument("--disable-gpu")
 
-    # Initialize the WebDriver
-    service = Service()
-    driver = webdriver.Chrome(service=service, options=options)
+    service = Service(executable_path=binary_path)
+    driver = webdriver.Chrome(service=service, options=chrome_options)
+
+
     # Visit the target webpage
     driver.get("https://edition.cnn.com/markets/fear-and-greed")
 

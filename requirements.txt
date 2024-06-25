@@ -1,2 +1,3 @@
 appwrite
 selenium
+chromedriver_py
