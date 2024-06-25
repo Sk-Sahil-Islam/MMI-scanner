@@ -19,15 +19,14 @@ def main(context):
     if context.req.method == "GET":
         # Send a response with the res object helpers
         # `ctx.res.send()` dispatches a string back to the client
-        return context.res.send("Hello, World!")
 
     # `ctx.res.json()` is a handy helper for sending JSON
-    mmi = getMmi()
-    return context.res.json(
-        {
-            "mmi": mmi
-        }
-    )
+        mmi = getMmi()
+        return context.res.json(
+            {
+                "mmi": mmi
+            }
+        )
 def getMmi():
     # Initialize Chrome options
     options = webdriver.ChromeOptions()
@@ -55,5 +54,4 @@ def getMmi():
         driver.quit()
 
     # Create the JSON response
-    response = json.dumps({ "mmi": mmi })
-    return response
+    return mmi
