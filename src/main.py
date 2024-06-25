@@ -36,7 +36,7 @@ def getMmi2():
     driver.get("https://edition.cnn.com/markets/fear-and-greed")
 
     # Wait for the page to load
-    time.sleep(3)
+    time.sleep(5)
 
     mmi = None
     try:
@@ -48,5 +48,6 @@ def getMmi2():
     finally:
         # Quit the WebDriver
         driver.quit()
+        return mmi
 
     return mmi
