@@ -25,6 +25,8 @@ def getMmi2():
     #service = Service(excutable_path=os.environ.get("CHROMEDRIVER_PATH"))
     #driver = webdriver.Chrome(service=service, options=options)
 
+    print(os.getcwd())
+
     chrome_options = Options()
     chrome_options.add_argument("--headless")
     chrome_options.add_argument("--disable-gpu")
