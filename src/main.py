@@ -50,6 +50,5 @@ def getMmi2():
     finally:
         # Quit the WebDriver
         driver.quit()
-        return mmi
 
     return mmi
